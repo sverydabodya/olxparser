@@ -51,7 +51,7 @@ def get_organic_ads():
             if "promoted" in href: continue
             ad_id = card.get("id")
             if not ad_id: continue
-            title_tag = card.find("h6")
+            title_tag = card.find("h4")
             title = title_tag.text.strip() if title_tag else "Без назви"
             price_tag = card.find("p", {"data-testid": "ad-price"})
             price = price_tag.text.strip() if price_tag else "Ціна не вказана"
@@ -120,3 +120,4 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("Бот зупинений")
+
