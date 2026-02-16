@@ -3,3 +3,4 @@ beautifulsoup4
 curl-cffi
 python-dotenv
 lxml
+aiohttp
